@@ -1,0 +1,22 @@
+1 首先我们要载入一张图片
+	$image='图片的地址'；
+	$img=GetImageSize($image);//得到的是图片的基本信息，重要的是$im[2]这个是代表这张图片的格式  接下来会用到1是gif 2是jpg 3是png
+
+2 将图片的编码变为php能够识别的编码
+	switch($img[2])
+	    case 1:
+		$im=@ImageCreateFromGIF($image);
+		break;
+	    case 2:	
+		$im=@ImageCreateFromJPEG($image);
+		break;
+	    case 3:
+		$im=@ImageCreateFromPNG($image);
+	        break;
+3 在第二步将解析的编码交给了$im
+	$bg=imagecolorallocate($im,0,0,0)//调出一个颜色
+	$str=iconv("gbk","UTF-8","要写入的内容")；
+	imagettftext($im,x1,y1,x2,y2,调出的颜色，'字体',$str);
+	//输出图片代码
+	 header("Content-type:image/jpeg");
+	ImageJpeg($im);

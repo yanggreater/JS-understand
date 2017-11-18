@@ -1,0 +1,2 @@
+smarty: 它是使用PHP写出来的PHP模板引擎  主要是将PHP程序和前台分离，意思就是前台改变不影响后台的程序（好像就是ThinkPHP）
+	1 smarty:配置

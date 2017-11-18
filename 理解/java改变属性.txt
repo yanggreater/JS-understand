@@ -1,0 +1,16 @@
+1,js的功能就是添加一些功能 
+	1 就是对于鼠标的移入和移出 其实就是div的display的转化（开始当然	   是将display设置为none)	
+	  onmouseover：“document.getElementByid('div').style.display='block';”意思就是鼠标一上去
+	   就会将div显示出来 
+	   onmouseout：“div.style.display='none';”意思就是鼠标移开显示出来	   的div将隐藏
+	
+
+2 在html中任何的标签都可以添加id 包括link a 甚至在<html>标签中也行 同任何标签的属性都可以改 就比如说link的href链接的属性
+
+
+3 对于你选中的id我要是想要改它的class 不能直接是document.ElementById（''）.class  而是需要写成className 因为是为了防止与class关键字发生冲突
+
+4 用函数传参数是为了减少代码 将一样的代码用一个来代替 而不一样的将用参数传如 实现不一样的效果
+
+
+5 对于函数的参数来说  如果有多个不同的地方 可以考虑要传多个参数 如果其中的一个是属性那么在代码中不能直接.'属性'，而是['属性']='' 详见第三个视屏

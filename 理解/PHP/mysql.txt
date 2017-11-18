@@ -1,0 +1,18 @@
+	where语句后面可以加'字段名' like '%关键字%'  同样的还有bewteen not bewteen等操作
+
+	对于mysql语句有排序 order by '字段名1' desc（倒序）/ASC(正序)字段名可以是多个 中间用逗号隔开
+
+	查询上的限制用limit  查询表中有几条可以在select 后面用count（*）
+
+	limit经常用于在分页中 select* from 表名 limit（$Page-1）*PageSize，$PageSize；
+
+	插入 用insert into 表名（'字段'）value（）时间的话可以用now（）函数注意的是字段名要和value中的一一对应 字段名可以省略但是value中的值必须对应
+
+	更新用的是update 表名 set 字段名=值 where 条件（比如 id=3）
+
+	
+
+	具体的上服务器中查看格式
+
+
+	

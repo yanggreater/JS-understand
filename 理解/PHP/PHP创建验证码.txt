@@ -1,0 +1,22 @@
+用GD库函数去创建验证码
+	1：$im=imagecreatetruecolor（int x,int y）函数 新建一个真彩色图像长宽
+	2：$bg=imagecolorallocate($im,0,0,0)调色函数第一次用调色自动为将图片的背景颜色 第二次使用就是设置出一个颜色交给一个变量 后面的0指的是三原色 可以通过rand（）函数去随机产生生成不同的颜色
+	3：imagestring($im,5,0,0,$rand,$bg2);两个0是x和y的起始坐标可以用rand（）函数自动生成  第一个为产生的图片  接下来一个是字体 后两个是字体的起始位置 ，$rand 是随机数内容   最后一个是字体颜色
+
+
+
+
+
+顺序为：先生成随机数  再创建图片 再将随机数写入图片 再保存在SEEION中
+
+	当生成随机数时我们需要用到rand（）用来生成随机数和dechex（）函数用来将随机数转化为16进制 因为验证码要有字母  形式为$rand.=dechex（rand（1.15））用.=目的是我要生成多个随机数就必须将这几个随机数连接起来形成多位随机数
+	
+	生成随机数时将随机数放进SESSION中 首先先启用session 用session_start()用到session[check_code]=$rand
+	当判断时 就是判断前台传过来的$_POST['code']是否等于session[check_code]
+
+
+	首先在图片生成时我们要对图片进行格式化输出 那么就需要 header("content-type: image/jpg"); imagejpg($im);
+
+	如想要在图片中插一些干扰线条  进行imageline($im,x1,y1,x2,y2,用函数产生的颜色) 产生多条需要循环
+	
+	如想生成一些干扰点   用到imagesetpixe1($im,x,y,颜色)

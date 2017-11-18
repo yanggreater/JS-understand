@@ -1,0 +1,6 @@
+对于图片上用汉字 那么要用到
+	$str=iconv("gbk","UTF-8","要写入的内容")；
+	imagettftext($im,x1,y1,x2,y2,调出的颜色，'字体',$str);
+	//输出图像
+	header("Content-type:image/jpeg");
+	ImageJpeg($im);

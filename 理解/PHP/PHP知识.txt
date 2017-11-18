@@ -1,0 +1,9 @@
+	在html中去显示PHP中的数要用<?php=$arr['name']?> 或<? echo $arr['name']?>
+
+	在html代码中你打的空格只能在页面显示一个 那么如果要是让页面显示你源代码中的多个空格或者是换行就要用$content=str_replace("\n","<br>",str_replace(" ","&nbsq")); 返回带有替换值的字符串或数组
+
+	表单提交有一个事件是onsubmit="return 函数名" 就是在表单提交前先执行的JS代码  在JS代码中if和else判断中如果是出现不符合的情况在条件代码中添加return flase 那么这个表单就不会被提交 因为函数返回的是flase ,在提交表单时需要给form一个name因为你在JS中首先需要找到form的位置
+
+	光标聚焦  表单（form名）名.input名.focus（）;当在页面alert后光标会聚焦在你设置的input名上面
+
+	从前台传值给后台用到URL传 <a href=cha.php?id=<?php echo $row['id']?>

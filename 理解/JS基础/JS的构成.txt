@@ -1,0 +1,9 @@
+JS的构成：
+	ECMAScript：翻译  是代码和电脑源码的翻译
+	DOM  Document Object Model   是对HTML的操作的入口 document
+	BOM  Browser Object Model  是对浏览器操作   window
+
+JS的数据：
+	typeof 是对数据类型的返回  比如：alert(typeof a) 假如a变量是数字那么就会在网页中弹出  number 类型
+
+	parseInt(parseFloat)（变量名) 就是将变量类型转化为数字型 工作原理是将字符串从左到右扫描直到不是数字就停止  但是当变量就不是数字开始的时候那么就会返回NaN 就是不是一个数字  经常和isNaN（）一起用判断返回的是不是NaNX型

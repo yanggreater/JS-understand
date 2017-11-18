@@ -1,0 +1,3 @@
+运算符:Instanceof
+	一个类运算符  它是用来测定一个对象是否来自指定的对象类
+	实例：class A(){}  $a=new A(); if($a instanceof A)[}

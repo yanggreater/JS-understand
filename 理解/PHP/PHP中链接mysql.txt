@@ -1,0 +1,15 @@
+	用$link=mysql_connect("localhost","root","") or die("链接错误");进行PHP对mysql连接如果连接失败将会执行die函数页面上会打印出链接错误
+
+	当mysql链接成功 那么就用mysql_select_db("数据库名"，$link);对数据库的连接
+
+	当连接成功数据库 那么用$query=mysql_query("SQL语句",$link)来执行SQL语句 一般是将SQL语句写在外面 在函数里面直接写$sql 要不函数在复杂 mysql_query()如果里面放的是查询之类的语句，那返回的是资源，说白了就是你要查的数据结果集；如果里面放的是增删改之类的语句，那返回的是true或者false了。
+
+	为了解决乱码需要加上mysql_query($link,"set names utf8");
+
+	当操作成功mysql 对于查询语句来说的是数据资源  用$arr=mysql_fenth_array($query)函数将数据资源转化为数组方便操作 返回的是数组 当转化完成后就会返回flase（这就是为什么下面会用while去循环） 如果是想要将数组的值全部输出就用循环while($arr=mysql_fenth_array($query)){ echo $arr['name'].$arr['id']等}
+
+	当要是查询数据库中有多少条信息是用$num=mysql_num_rows($query);返回的是数字 一般会用到分页
+
+	  
+
+	

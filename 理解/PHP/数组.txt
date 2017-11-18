@@ -1,0 +1,7 @@
+1 有关数组 在Thinkphp中是用dump来对数组输出的 在PHP中有一个函数叫  printf_r($arr);来对函数输出的
+
+	数组的函数有count($arr)(返回的是数组元素的个数) is_array($arr)（返回的是真假 判断的是不是数组）
+
+	数组的遍历 用foreach（$arr as $key=>$vo){ }来完成($key可以省略它是代表数组的下标)
+
+	

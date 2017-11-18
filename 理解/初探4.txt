@@ -1,0 +1,13 @@
+1 对于优先级 class<ID<style(行间样式) 所以通过JS来修改样式尽量针对一种去	  修改 因为如果修改了行内在通过.className去给它添加样式 但它的优先级不高  而被覆盖（行间就是用.style.属性=''）
+
+2 用JS提取行间事件
+	window.onload=function(){  } 页面加载完成才执行函数内的代码(重要	不用的话可能下面的代码不能加载出来导致程序运行出错)
+	对于事件来说直接onclick=function（）{ }就行不用给它起函数名
+3 getElementsByTagName 返回的是有关你的标签的数组 群体  另外有关取元素 前面不一定就是要写document  比如说我有个div<id='div1'> 我用var arr=document.getElementById先选中div 然后用var arr2=arr.getElementsByTagName() 对于全选问题来在JS中设置是要arr[i].checked=true;
+
+4 this是指当前发生事件的元素
+
+5 对于div或其他的标签来书如果是要在其中加文字就要用到innerHTML('');
+
+6 选项卡来说可以设置div 在JS的循环中套一个循环内层循环是为了将所有的div  设置为none 在外层的循环内最后设置this.style.dispaly='block';
+

@@ -1,0 +1,9 @@
+onsubmit 指在表单未提交时发生的事件
+
+onclick
+
+onkeyup
+
+onmouseover 指鼠标一上去发生的事件
+
+onmouseout  指鼠标离开发生的事件

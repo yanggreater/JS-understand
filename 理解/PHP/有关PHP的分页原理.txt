@@ -1,0 +1,34 @@
+对于分页的效果来说首先要知道的是limit语句 用limit语句来限制一页能够显示几条数据
+
+第一步：
+	首先你需需要连接数据库用SQL语句来查询你的数据有多少条
+	$link=mysql_query("select * form '数据表'")；
+	$num=mysql_num_rows($link);返回的就是你数据库中数据的条数
+	同时需要得到当前页面的URL的地址 用来做上一页和下一页的链接
+	$url=$_SERVER['REQUEST_URI'];
+	$url=parse_url($url);//是将URL解析为有固定毽值
+	$url=urlarr[path];//此时得到了当前页面的地址
+	
+		对于取地址还需要研究
+
+第二部：
+	设定每页最多能显示数据的条数$pagesize=5
+	我们就需要用公式去算出每一页的起始的数据条数$page
+	代码如下：
+	if($_GET[page]){//为了防止错误首先判断在url地址中是否出现了页数
+		$pageval=$_GET[page];//是为了得到当前的页数
+		$page=($pageval-1)*$pagesize;//得到该页应该显示数据的数
+		
+	}
+	$SQL="select * form '数据表名' limit $page,$pagesize";
+	$query=mysql_query($SQL);//对sql语句执行 返回数据集
+	while($row=mysql_fetch_array($query)){//通过循环得到对应数据
+		echo $row['name']."|".$row['sex'];//等有什么就用数组输出
+	}
+
+第三部：
+	在下端显示分页的效果
+	if($num>$pagesize){
+		if($pageval<=1)  $pagesize=1;
+		echo "共$num 条"."<a href=$url?page=".($pageval-1).">上一页</a>."下一页"   //下一页同理	
+	}
