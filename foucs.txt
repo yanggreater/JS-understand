@@ -1,0 +1,1 @@
+注意 当你没用到git.clone时 你直接在你的本地创建一个文件 在更改完， git push origin master前  你需要用到git remote add origin 地址 要将你的本地创库和远程链接起来  而对于clone来说人家就是从远程厂库复制来的所以不用 就是有一一对应的关系
