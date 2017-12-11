@@ -4,6 +4,17 @@ JS的构成：
 	BOM  Browser Object Model  是对浏览器操作   window
 
 JS的数据：
-	typeof 是对数据类型的返回  比如：alert(typeof a) 假如a变量是数字那么就会在网页中弹出  number 类型
+	typeof 是对数据类型的返回  比如：alert(typeof a) 假如a变量是数字那么就会在网页中弹出  number 类型 有number boolen string object（document） function undefined两种情况 是就是没定义和定义了 但是没有给值
 
-	parseInt(parseFloat)（变量名) 就是将变量类型转化为数字型 工作原理是将字符串从左到右扫描直到不是数字就停止  但是当变量就不是数字开始的时候那么就会返回NaN 就是不是一个数字  经常和isNaN（）一起用判断返回的是不是NaNX型
+	parseInt、parseFloat（变量名) 就是将变量类型转化为数字型 工作原理是将字符串从左到右扫描直到不是数字就停止  但是当变量就不是数字开始的时候那么就会返回NaN (not a number)就是不是一个数字  经常和isNaN（）一起用判断返回的是不是NaNX型 来提示用户是否输入格式错误
+
+NaN和NaN不相等
+
+==是先转化类型，然后比较
+===是直接比较
+-是将变量转化为数字在相减  和+号不一样
+
+
+闭包：就是子函数可以使用父函数的局部变量 子函数和父函数就你函数的包含关系
+
+变量取名 应有类型前缀和单词首字母大写

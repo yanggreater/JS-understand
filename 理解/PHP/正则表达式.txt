@@ -1,0 +1,1 @@
+1.正则函数一般采用 preg_match($mode,$str,$arr)mode是指正则表达式的内容，str是需要匹配的原内容 arr是匹配出的结果
