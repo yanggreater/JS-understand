@@ -1,0 +1,3 @@
+1 事件绑定：
+	IE：attachEvent('事件名'，函数); 对应detachEvent删除绑定
+	FF AND CHROME : addEventListener('事件名'，函数，flase)；但是注意的是，对于这个函数的事件名，不加on前缀，比如onclick 就不加on

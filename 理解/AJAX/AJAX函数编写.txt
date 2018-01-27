@@ -1,0 +1,15 @@
+1 创建一个AJAX的对象
+	创建一个AJAX对象会有兼容性，
+	非IE6  是通过new XMLHttpRequest()来创建
+	IE6 来说 通过new ActiveXobject("Microsoft.XMLHTTP")
+	
+	还有问题需要注意的是就是属性和变量的区别，没有定义的变量胡报错，没有定义的属性 返回undefined，所以在做兼容时 就会用到属性，因为你用if和else判断时
+报错就不会执行，所以用到属性。 对于属性的理解，其实对于每一个变量都是window下的属性，只要在前加一个window.即可 具体参照代码
+2 连接到服务器上
+	oAjax.open('GET','访问文件地址',true);open(方法，文件地址，异步传送)
+
+3 发送请求（就是告诉服务器我要那个文件）
+	oAjax.send();
+
+4 接受文件
+	oAjax.onreadystatechange=function{}详情见代码

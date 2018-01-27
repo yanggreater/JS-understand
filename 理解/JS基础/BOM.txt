@@ -1,0 +1,18 @@
+打开窗窗口
+	document.write('内容'）;原理是将之前页面的东西清空，然后在创建一个新的页面将内容写在上
+	一般var newwin=document.open('about:blank','_blank');第一个参数是打开一个空白页，第二个参数是 你的开空白页是覆盖本页面（_self）,还是再开辟一个页面(_blank),也可以直接 document.open('目标文件')；
+
+-----------------------------------------------------------------------------
+关闭窗口
+	document.close()首先对于close来说不能关闭用户打开的窗口，只能关闭你通过open函数开辟的窗口
+
+----------------------------------------------------------------------------
+BOM的一些属性：
+	window.navigator.userAgent是当前浏览器的版本
+	window.location是当前页面的地址，同时还可以赋值，在事件中用 会直接将页面跳转到你赋值的地址中去
+-----------------------------------------------------------------------------
+尺寸和坐标
+	document.documentElement.clientWidth 可视区的长度
+	document.documentElement.clientHeight 可视区高度
+	document.documentElement.scrollTop 距离页面顶端高度
+	
