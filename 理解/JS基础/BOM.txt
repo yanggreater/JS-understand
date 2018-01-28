@@ -14,5 +14,10 @@ BOM的一些属性：
 尺寸和坐标
 	document.documentElement.clientWidth 可视区的长度
 	document.documentElement.clientHeight 可视区高度
-	document.documentElement.scrollTop 距离页面顶端高度
+	document.documentElement.scrollTop 距离页面顶端高度 document.body.scrollTop兼容谷歌
+	当用到滚动时 window.onscroll=window.onresize=function()就是当窗口滚动时或窗口改变大小时
+--------------------------- -------------------------------------------------
+常用的对话框和事件
+	alert('内容')； 选择框 confirm("提问的内容")，有返回值 返回boolen】
+	输入框 prompt() 返回字符串或null
 	

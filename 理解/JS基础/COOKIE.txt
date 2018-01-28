@@ -1,2 +1,6 @@
 什么是COOKIE
 	作用就是页面用来保存信息的（如：自动登录，记录用户名）
+	首先是对COOKIE设置：document.cookie
+	var oDate=new Date();
+	oDiv.setDate（oDate.getDate()+14）;
+	document.cookie='uer=blue;expires='+oDate;就是对cooike设置时间
